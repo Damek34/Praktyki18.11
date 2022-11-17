@@ -25,11 +25,26 @@ var dodatkowe1 = array => array.filter(arrayElement => arrayElement.length == 5 
 
 var dodatkowe2 = array => array.filter(arrayElement => arrayElement%2 == 0);
 
+var dodatkowe3 = (array, min, i) => 
+{
+    if(i == array.length)
+    {
+        return min;
+    }
+    if(array[i] < min)
+    {
+        min = array[i];
+    }
+
+   return dodatkowe3(array, min, i+1)
+}
+
 console.log(polacz(arr1, arr2));
 console.log(ostatni(arr2));
 console.log(filtr(arr2));
 console.log(redukcja);
 console.log(tabMap);
 
-console.log(dodatkowe1(arr2));
-console.log(dodatkowe2(numbers))
+console.log("Dodatkowe1:   " + dodatkowe1(arr2));
+console.log("Dodatkowe2:   " +dodatkowe2(numbers));
+console.log("Dodatkowe3:   " +dodatkowe3(numbers, numbers[0], 0));
