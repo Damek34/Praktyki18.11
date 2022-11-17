@@ -17,9 +17,10 @@ var filtr = (array) => array.filter(array => array.length > 4);
 
 var redukcja = numbers.reduce((previousValue, currentValue) => previousValue + currentValue);
 
-
+var tabMap = [...numbers].map(x => x*x+3);
 
 console.log(polacz(arr1, arr2));
 console.log(ostatni(arr2));
 console.log(filtr(arr2));
 console.log(redukcja);
+console.log(tabMap);
