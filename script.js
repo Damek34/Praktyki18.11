@@ -23,9 +23,13 @@ var tabMap = [...numbers].map(x => x*x+3);
 
 var dodatkowe1 = array => array.filter(arrayElement => arrayElement.length == 5 && arrayElement.endsWith("ek"));
 
+var dodatkowe2 = array => array.filter(arrayElement => arrayElement%2 == 0);
+
 console.log(polacz(arr1, arr2));
 console.log(ostatni(arr2));
 console.log(filtr(arr2));
 console.log(redukcja);
 console.log(tabMap);
+
 console.log(dodatkowe1(arr2));
+console.log(dodatkowe2(numbers))
